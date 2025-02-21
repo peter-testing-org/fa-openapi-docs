@@ -5,17 +5,18 @@ info:
   version: 1.0.0
   contact: {}
 security:
-  - oauth2Auth: []
+  - sandboxAuth: []
 servers:
-  - url: http://api.lvh.me:3000
+  - url: https://api.sandbox.freeagent.com
+    description: Sandbox
 components:
   securitySchemes:
-    oauth2Auth:
+    sandboxAuth:
       type: oauth2
       flows:
         authorizationCode:
-          authorizationUrl: http://api.lvh.me:3000/v2/approve_app
-          tokenUrl: http://api.lvh.me:3000/v2/token_endpoint
+          authorizationUrl: https://api.sandbox.freeagent.com/v2/approve_app
+          tokenUrl: https://api.sandbox.freeagent.com/v2/token_endpoint
           scopes: {}
 paths:
   /v2/attachments/{id}:
